@@ -17,6 +17,7 @@ public class TransactionStatus {
     private String RRR;
     private String transactiontime;
     private String orderId;
+    private String message;
 
     /**
      * @return the statusmessage
@@ -100,6 +101,20 @@ public class TransactionStatus {
      */
     public void setOrderId(String orderId) {
         this.orderId = orderId;
+    }
+
+    /**
+     * @return the message
+     */
+    public String getMessage() {
+        return message;
+    }
+
+    /**
+     * @param message the message to set
+     */
+    public void setMessage(String message) {
+        this.message = message;
     }
     
 }

@@ -49,8 +49,17 @@
                     </div>
                 </form>
             </c:when>
-            <c:when test="remitaResponse.statuscode == '022'">
+            <c:when test="${remitaResponse.statuscode == '022'}">
                 <p>Invalid Request!</p>
+            </c:when>
+            <c:when test="${remitaResponse.statuscode == '029'}">
+                <p>Invalid Bank Code!</p>
+            </c:when>
+                <c:when test="${remitaResponse.statuscode == '031'}">
+                <p>No Funding Account!</p>
+            </c:when>
+            <c:when test="${remitaResponse.statuscode == '023'}">
+                <p>Service Type or Merchant Does not Exist!</p>
             </c:when>
             <c:otherwise>
                 <p>Something bad went wrong. Try checking your connection or contact the producers!</p>
